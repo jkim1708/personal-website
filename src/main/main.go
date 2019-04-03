@@ -1,11 +1,3 @@
-/*
-TODOs
-0.) github workflow zu Ende !!!!
-
-1.) Ausprobieren: Buttons mit Werten senden und schauen ob der Body ausgelesen werden kann. Ansonsten wie mit Login
-machen.
-
-*/
 package main
 
 import (
