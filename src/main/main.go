@@ -56,12 +56,12 @@ var users = map[string]string{
 // === template pool ==
 
 var templates = template.Must(template.ParseFiles(
-	"FrontPage.html",
-	"AboutMe.html",
-	"ContactMe.html",
-	"ProjectsPage.html",
-	"LoginPage.html",
-	"cvRequestsTable.html",
+	"templates/FrontPage.html",
+	"templates/AboutMe.html",
+	"templates/ContactMe.html",
+	"templates/ProjectsPage.html",
+	"templates/LoginPage.html",
+	"templates/cvRequestsTable.html",
 	"stylesheets/fp.css",
 	"stylesheets/am.css",
 	"stylesheets/pp.css",
@@ -591,6 +591,7 @@ func main() {
 	go func() {
 		if erro := s.ListenAndServe(); erro != nil {
 			log.Fatal(erro)
+
 		}
 	}()
 	<-stop
