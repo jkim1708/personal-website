@@ -58,6 +58,7 @@ var users = map[string]string{
 var templates = template.Must(template.ParseFiles(
 	"templates/FrontPage.html",
 	"templates/AboutMe.html",
+
 	"templates/ContactMe.html",
 	"templates/ProjectsPage.html",
 	"templates/LoginPage.html",
@@ -76,7 +77,6 @@ var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
 func renderTemplate(w http.ResponseWriter, tmpl string) {
 	err := templates.ExecuteTemplate(w, tmpl+".html", " ")
 	if err != nil {
-
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
