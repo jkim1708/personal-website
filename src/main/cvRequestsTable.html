@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/cvRequestsTable.css">
+
+</head>
+<header></header>
+<h1></h1>
+
+<body border="1" >
+
+  <div class=" gridConfig" s>
+    <div></div>
+    <div class="centerTable">
+      <table cellspacing="0" cellpadding="0" border="0" width="200">
+        <div style="width:100%; height:100px; overflow:auto;">
+          <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              
+            <tr style="color:white;background-color:grey">
+              <td>Name</td>
+              <td>Company name</td>
+              <td>Email</td>                       
+            </tr>            
+            <tr>                
+              <td>{{.name0}}</td>
+              <td>{{.companyName0}}</td>
+              <td>{{.emailAdress0}}</td>                         
+            </tr>
+          
+            <tr>
+              <td>{{.name1}}</td>
+              <td>{{.companyName1}}</td>
+              <td>{{.emailAdress1}}</td>              
+            </tr>
+            <tr>
+              <td>{{.name2}}</td>
+              <td>{{.companyName2}}</td>
+              <td>{{.emailAdress2}}</td>              
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <td>{{.name3}}</td>
+              <td>{{.companyName3}}</td>
+              <td>{{.emailAdress3}}</td>             
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <td>{{.name4}}</td>
+              <td>{{.companyName4}}</td>
+              <td>{{.emailAdress4}}</td>              
+            </tr>
+            <tr>
+            </tr>
+          </div>
+          </table>
+
+      </table>
+    </div>
+    <div></div>
+  </div>
+
+      <form action="/deleteRequest" method="post">                        
+        <label for="nameDelete">name</label>
+        <input  name ="nameDelete" id="nameDelete">        
+        <button type="submit">delete</button>
+    </form>
+    <form action="/replyRequest" method="post" >                        
+      <label for="nameReply">name</label>
+      <input  name ="nameReply" id="nameReply">        
+      <button type="submit">Reply</button>
+  
+  </form>
+</body>
+
+</html>
+
