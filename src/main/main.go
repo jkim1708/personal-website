@@ -76,6 +76,7 @@ var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
 func renderTemplate(w http.ResponseWriter, tmpl string) {
 	err := templates.ExecuteTemplate(w, tmpl+".html", " ")
 	if err != nil {
+
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
