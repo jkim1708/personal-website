@@ -583,8 +583,8 @@ func main() {
 	})
 	go func() {
 		if erro := s.ListenAndServe(); erro != nil {
+			fmt.Println("error while shutting down")
 			log.Fatal(erro)
-
 		}
 	}()
 	<-stop
